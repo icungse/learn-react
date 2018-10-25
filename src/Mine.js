@@ -13,11 +13,11 @@ class Mine extends React.Component {
                     React is cool
                 </div>
 
-                <Child />
+                <Child text="Learn"/>
                 <br/>
-                <Child />
+                <Child text="React Js"/>
                 <br/>
-                <Child />
+                <Child text="Cool"/>
             </div>
         );
     }
