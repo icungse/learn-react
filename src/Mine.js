@@ -1,4 +1,5 @@
 import React from 'react'
+import Child from './Child';
 
 class Mine extends React.Component {
     render() {
@@ -11,6 +12,12 @@ class Mine extends React.Component {
                 <div>
                     React is cool
                 </div>
+
+                <Child />
+                <br/>
+                <Child />
+                <br/>
+                <Child />
             </div>
         );
     }
