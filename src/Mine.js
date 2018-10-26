@@ -4,7 +4,19 @@ import Child from './Child';
 class Mine extends React.Component {
     constructor(){
         super()
-        this.state = {texts: ['Learning ReactJs', 'Funny', 'Cool']}
+        this.state = {texts: []}
+        this.changeColor = this.changeColor.bind(this)
+    }
+
+    componentDidMount(){
+        this.setState({texts: ['Learn ReacJs', 'Really Fun', 'Hehehe'], color: 'green'})
+    }
+    changeColor(){
+        if (this.state.color === 'green') {
+            this.setState({color: 'blue'})
+        } else {
+            this.setState({color: 'green'})
+        }
     }
     render() {
         let texts = this.state.texts.map(function(text) {
@@ -12,8 +24,10 @@ class Mine extends React.Component {
                 <Child text = {text} />
             )
         })
+
+        let style = {color: this.state.color}
         return(
-            <div>
+            <div style={style} onClick={this.changeColor}>
                 <div id="mine">
                     Hello World Js
                 </div>
